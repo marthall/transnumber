@@ -1,22 +1,43 @@
 <html>
     <head>
-        <link rel="stylesheet" href="modulo.css">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/converter.css">
         <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="modulo.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <script type="text/javascript" src="js/ready.js"></script>
+        <script type="text/javascript" src="js/converter.js"></script>
     </head>
     <body>
         <div class="container">
-            <h1>Dec to Bin</h1>
-            <textarea id="input" class="io"></textarea>
-            <table class="io">
-                <colgroup>
-                   <col span="1" style="width: 16%;">
-                   <col span="1" style="width: 84%;">
-                </colgroup>
-                <tbody id="output"></tbody>
-            </table> 
+            <h1>Converter</h1>
+            <div class="io-box">
+                <div class="btn-group in-choice">
+                    <button class="btn dec" value="10">Dec</button>
+                    <button class="btn bin" value="2">Bin</button>
+                    <button class="btn hex" value="16">Hex</button>
+                </div>
+                <textarea id="input" class="io"></textarea>
+            </div>
+            <i id="right-arrow" class="fa fa-chevron-right"></i>
+            <div class="io-box">
+                <div class="btn-group out-choice">
+                    <button class="btn dec" value="10">Dec</button>
+                    <button class="btn bin" value="2">Bin</button>
+                    <button class="btn hex" value="16">Hex</button>
+                </div>
+                <select id="format">
+                    <option value="">none</option>
+                    <option value=",">[comma]</option>
+                    <option value=" ">[space]</option>
+                    <option value="<br>">[newline]</option>
+                </select>
+                <div id="output" class="io"></div>
+            </div>
             <div class="clearfix"></div>
         </div>
+        <footer>
+            <p>Created by Martin Hallén</p>
+        </footer>
     </body>
-</html
+</html>
